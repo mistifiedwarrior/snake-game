@@ -1,0 +1,23 @@
+features :- 
+
+whenever snake will eat a food its size will increase in the same proportion
+if the snake will touch the boundary of the border , the game will end 
+If snake is however touches its own body , then also game will end .
+the score of the game will increase in the same proportion as the snake will eat the food.
+
+
+things to do :-
+
+ layout
+ food 
+ snake 
+ score
+
+
+ border 
+dead snake
+movement in snake 
+food
+Snake should be able to eat food 
+and increment in snake's size and score 
+game end conditions.
