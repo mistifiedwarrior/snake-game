@@ -14,7 +14,7 @@ things to do :-
  score
 
 
- border 
+ border ====== done 
 dead snake
 movement in snake 
 food
