@@ -15,8 +15,8 @@ things to do :-
 
 
  border ====== done 
-dead snake
-movement in snake 
+dead snake ==========done
+movement in snake =============done
 food
 Snake should be able to eat food 
 and increment in snake's size and score 

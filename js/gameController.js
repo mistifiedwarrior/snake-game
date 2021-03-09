@@ -7,4 +7,9 @@ class Controller {
     this.presenter.createCells();
     this.presenter.drawSnake();
   }
+
+  runGame() {
+    this.game.moveSnake();
+    this.presenter.drawSnake();
+  }
 }

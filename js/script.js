@@ -9,6 +9,9 @@ const main = () => {
   const presenter = new Presenter($grid, game, snake);
   const controller = new Controller(presenter, game);
   controller.start();
+  setInterval(() => {
+    controller.runGame();
+  }, 200);
 };
 
 // window.onload = main;
