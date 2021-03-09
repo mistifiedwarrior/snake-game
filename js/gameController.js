@@ -11,5 +11,6 @@ class Controller {
   runGame() {
     this.game.moveSnake();
     this.presenter.drawSnake();
+    this.presenter.drawFood();
   }
 }

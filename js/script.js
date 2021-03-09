@@ -5,8 +5,9 @@ const main = () => {
     [0, 1],
     [0, 2],
   ]);
-  const game = new Game(snake);
-  const presenter = new Presenter($grid, game, snake);
+  const food = new Food([25, 25]);
+  const game = new Game(snake, food);
+  const presenter = new Presenter($grid, game);
   const controller = new Controller(presenter, game);
   controller.start();
   setInterval(() => {
