@@ -1,21 +1,61 @@
-const Direction = {
-  UP: 'UP',
-  DOWN: 'DOWN',
-  LEFT: 'LEFT',
-  RIGHT: 'RIGHT',
+const RIGHT = 'RIGHT';
+const LEFT = 'LEFT';
+const UP = 'UP';
+const DOWN = 'DOWN';
 
-  getDelta: (direction) => {
-    if (direction === 'RIGHT') {
+class Direction {
+  constructor() {
+    this.direction = RIGHT;
+  }
+
+  getDelta() {
+    if (this.direction === RIGHT) {
       return [0, 1];
     }
-    if (direction === 'LEFT') {
+    if (this.direction === LEFT) {
       return [0, -1];
     }
-    if (direction === 'UP') {
+    if (this.direction === UP) {
       return [-1, 0];
     }
-    if (direction === 'DOWN') {
+    if (this.direction === DOWN) {
       return [1, 0];
     }
-  },
-};
+  }
+  setDirection(dir) {
+    if (this.direction == RIGHT && dir != LEFT) {
+      this.direction = dir;
+    }
+    if (this.direction == UP && dir != DOWN) {
+      this.direction = dir;
+    }
+    if (this.direction == DOWN && dir != UP) {
+      this.direction = dir;
+    }
+    if (this.direction == LEFT && dir != RIGHT) {
+      this.direction = dir;
+    }
+  }
+}
+
+// const Direction = {
+//   UP: 'UP',
+//   DOWN: 'DOWN',
+//   LEFT: 'LEFT',
+//   RIGHT: 'RIGHT',
+
+//   getDelta: (direction) => {
+//     if (direction === 'RIGHT') {
+//       return [0, 1];
+//     }
+//     if (direction === 'LEFT') {
+//       return [0, -1];
+//     }
+//     if (direction === 'UP') {
+//       return [-1, 0];
+//     }
+//     if (direction === 'DOWN') {
+//       return [1, 0];
+//     }
+//   },
+// };

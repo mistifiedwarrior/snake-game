@@ -1,16 +1,16 @@
 const attachEventListener = (controller) => {
   document.body.onkeydown = function (e) {
     if (e.key === 'ArrowUp') {
-      controller.changeDirection(Direction.UP);
+      controller.changeDirection(UP);
     }
     if (e.key === 'ArrowDown') {
-      controller.changeDirection(Direction.DOWN);
+      controller.changeDirection(DOWN);
     }
     if (e.key === 'ArrowLeft') {
-      controller.changeDirection(Direction.LEFT);
+      controller.changeDirection(LEFT);
     }
     if (e.key === 'ArrowRight') {
-      controller.changeDirection(Direction.RIGHT);
+      controller.changeDirection(RIGHT);
     }
   };
 };
