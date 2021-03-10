@@ -1,6 +1,3 @@
-const NUM_OF_ROWS = 60;
-const NUM_OF_COLS = 80;
-
 const getCellId = (rowId, colId) => `cell-${colId}_${rowId}`;
 
 const getCell = (rowId, colId) => getElement(`#${getCellId(rowId, colId)}`);
@@ -34,5 +31,9 @@ class Presenter {
     const foodPosition = this.game.food.getPosition();
     const $foodPosition = getCell(foodPosition[0], foodPosition[1]);
     $foodPosition.classList.add('food');
+  }
+  eraseFood(foodPosition) {
+    const $foodPosition = getCell(foodPosition[0], foodPosition[1]);
+    $foodPosition.classList.remove('food');
   }
 }

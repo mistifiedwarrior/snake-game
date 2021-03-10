@@ -9,9 +9,11 @@ class Controller {
   }
 
   runGame() {
-    this.game.moveSnake();
-    this.presenter.drawSnake();
     this.presenter.drawFood();
+    this.presenter.drawSnake();
+    this.game.moveSnake();
+    const foodPosition = this.game.hasEatenFood();
+    this.presenter.eraseFood(foodPosition);
   }
   changeDirection(direction) {
     this.game.snakeDirection(direction);

@@ -5,4 +5,8 @@ class Food {
   getPosition() {
     return this.position;
   }
+  getNewPositionOfFood() {
+    const position = [getRandomNum(NUM_OF_ROWS), getRandomNum(NUM_OF_COLS)];
+    return new Food(position);
+  }
 }

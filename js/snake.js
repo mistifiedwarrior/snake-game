@@ -26,4 +26,9 @@ class Snake {
   changeDirection(direction) {
     this.direction.setDirection(direction);
   }
+  isFoodEaten(food) {
+    const head = this.getHead();
+    const foodPosition = food.getPosition();
+    return head[0] == foodPosition[0] && head[1] == foodPosition[1];
+  }
 }

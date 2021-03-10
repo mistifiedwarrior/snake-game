@@ -14,10 +14,10 @@ things to do :-
  score
 
 
- border ====== done 
-dead snake ==========done
-movement in snake =============done
-food
+ border === done 
+dead snake ===== done
+movement in snake === done
+food ===================== done
 Snake should be able to eat food 
 and increment in snake's size and score 
 game end conditions.
