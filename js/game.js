@@ -6,4 +6,7 @@ class Game {
   moveSnake() {
     this.snake.move();
   }
+  snakeDirection(direction) {
+    this.snake.changeDirection(direction);
+  }
 }

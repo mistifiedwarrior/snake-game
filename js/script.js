@@ -1,3 +1,20 @@
+const attachEventListener = (controller) => {
+  document.body.onkeydown = function (e) {
+    if (e.key === 'ArrowUp') {
+      controller.changeDirection(Direction.UP);
+    }
+    if (e.key === 'ArrowDown') {
+      controller.changeDirection(Direction.DOWN);
+    }
+    if (e.key === 'ArrowLeft') {
+      controller.changeDirection(Direction.LEFT);
+    }
+    if (e.key === 'ArrowRight') {
+      controller.changeDirection(Direction.RIGHT);
+    }
+  };
+};
+
 const main = () => {
   const $grid = getElement('#grid');
   const snake = new Snake([
@@ -10,6 +27,7 @@ const main = () => {
   const presenter = new Presenter($grid, game);
   const controller = new Controller(presenter, game);
   controller.start();
+  attachEventListener(controller);
   setInterval(() => {
     controller.runGame();
   }, 200);

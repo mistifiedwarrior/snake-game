@@ -13,4 +13,7 @@ class Controller {
     this.presenter.drawSnake();
     this.presenter.drawFood();
   }
+  changeDirection(direction) {
+    this.game.snakeDirection(direction);
+  }
 }
