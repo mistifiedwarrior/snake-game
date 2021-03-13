@@ -31,4 +31,7 @@ class Snake {
     const foodPosition = food.getPosition();
     return head[0] == foodPosition[0] && head[1] == foodPosition[1];
   }
+  grow() {
+    this.position.unshift(this.tail);
+  }
 }

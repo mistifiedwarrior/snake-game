@@ -16,10 +16,12 @@ class Presenter {
       }
     }
   }
+
   drawSnake() {
     const tail = this.game.snake.getTail();
     const $tail = getCell(tail[0], tail[1]);
     $tail.classList.remove('snake');
+
     const snakePosition = this.game.snake.getPosition();
     snakePosition.forEach((position) => {
       const cell = getCell(position[0], position[1]);

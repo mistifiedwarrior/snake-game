@@ -12,6 +12,7 @@ class Game {
   }
   hasEatenFood() {
     if (this.snake.isFoodEaten(this.food)) {
+      this.snake.grow();
       this.food.getNewPositionOfFood();
       this.score.update();
       return true;

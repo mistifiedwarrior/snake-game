@@ -30,5 +30,5 @@ const main = () => {
   attachEventListener(controller);
   setInterval(() => {
     controller.runGame();
-  }, 200);
+  }, 500);
 };

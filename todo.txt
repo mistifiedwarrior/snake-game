@@ -18,6 +18,6 @@ things to do :-
 dead snake ===== done
 movement in snake === done
 food ===================== done
-Snake should be able to eat food 
+Snake should be able to eat food  =====done
 and increment in snake's size and score 
 game end conditions.
