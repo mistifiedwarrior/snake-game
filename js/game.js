@@ -19,4 +19,7 @@ class Game {
     }
     return false;
   }
+  hasEnded() {
+    return this.snake.touchedBorder() || this.snake.touchedItself();
+  }
 }

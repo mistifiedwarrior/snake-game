@@ -28,7 +28,11 @@ const main = () => {
   const controller = new Controller(presenter, game);
   controller.start();
   attachEventListener(controller);
-  setInterval(() => {
+  const timerID = setInterval(() => {
+    if (controller.hasGameEnded()) {
+      clearInterval(timerID);
+      controller.endGame();
+    }
     controller.runGame();
-  }, 500);
+  }, 200);
 };

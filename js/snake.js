@@ -34,4 +34,20 @@ class Snake {
   grow() {
     this.position.unshift(this.tail);
   }
+  touchedBorder() {
+    const head = this.getHead();
+    return (
+      head[0] >= NUM_OF_ROWS ||
+      head[0] < 0 ||
+      head[1] >= NUM_OF_COLS ||
+      head[1] < 0
+    );
+  }
+  touchedItself() {
+    const body = this.position.slice(0, -1); //[[0,0],[0,1]]
+    const head = this.getHead(); //[0,2]
+    return body.some((e) => {
+      return e[0] == head[0] && e[1] == head[1];
+    });
+  }
 }

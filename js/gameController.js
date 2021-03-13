@@ -9,7 +9,12 @@ class Controller {
     this.presenter.drawFood();
     this.presenter.displayScore();
   }
-
+  hasGameEnded() {
+    return this.game.hasEnded();
+  }
+  endGame() {
+    this.presenter.displayEndGame();
+  }
   runGame() {
     this.game.moveSnake();
     if (this.game.hasEatenFood()) {

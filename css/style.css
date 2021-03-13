@@ -28,3 +28,17 @@ body {
   font-size: 24px;
   font-weight: bold;
 }
+#end {
+  position: absolute;
+  top: 20vh;
+  left: 30vw;
+  width: 40vw;
+  height: 40vh;
+  background-color: #ccc;
+  transition: all 0.4s;
+  text-align: center;
+  border: 2px solid blue;
+}
+.hidden {
+  display: none;
+}

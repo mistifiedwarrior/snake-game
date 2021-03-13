@@ -43,4 +43,11 @@ class Presenter {
     const $score = getElement('#score');
     $score.innerText = `Score: ${this.game.score.getScore()}`;
   }
+  displayEndGame() {
+    const $end = getElement('#end');
+    $end.classList.remove('hidden');
+    $end.innerHTML = `<h1>Game Over !! </h1> 
+    <h3> Your Score : ${this.game.score.getScore()}</h3>`;
+    this.grid.style.filter = 'blur(1px)';
+  }
 }
