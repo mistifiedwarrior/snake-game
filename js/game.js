@@ -2,6 +2,7 @@ class Game {
   constructor(snake, food) {
     this.snake = snake;
     this.food = food;
+    this.score = new Score();
   }
   moveSnake() {
     this.snake.move();
@@ -11,9 +12,10 @@ class Game {
   }
   hasEatenFood() {
     if (this.snake.isFoodEaten(this.food)) {
-      const foodPosition = this.food.getPosition();
-      this.food = this.food.getNewPositionOfFood();
-      return foodPosition;
+      this.food.getNewPositionOfFood();
+      this.score.update();
+      return true;
     }
+    return false;
   }
 }

@@ -6,14 +6,18 @@ class Controller {
   start() {
     this.presenter.createCells();
     this.presenter.drawSnake();
+    this.presenter.drawFood();
+    this.presenter.displayScore();
   }
 
   runGame() {
-    this.presenter.drawFood();
-    this.presenter.drawSnake();
     this.game.moveSnake();
-    const foodPosition = this.game.hasEatenFood();
-    this.presenter.eraseFood(foodPosition);
+    if (this.game.hasEatenFood()) {
+      this.presenter.eraseFood();
+      this.presenter.displayScore();
+      this.presenter.drawFood();
+    }
+    this.presenter.drawSnake();
   }
   changeDirection(direction) {
     this.game.snakeDirection(direction);

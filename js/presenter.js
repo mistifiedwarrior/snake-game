@@ -32,8 +32,13 @@ class Presenter {
     const $foodPosition = getCell(foodPosition[0], foodPosition[1]);
     $foodPosition.classList.add('food');
   }
-  eraseFood(foodPosition) {
+  eraseFood() {
+    const foodPosition = this.game.food.getPreviousFoodPosition();
     const $foodPosition = getCell(foodPosition[0], foodPosition[1]);
     $foodPosition.classList.remove('food');
+  }
+  displayScore() {
+    const $score = getElement('#score');
+    $score.innerText = `Score: ${this.game.score.getScore()}`;
   }
 }

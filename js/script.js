@@ -22,7 +22,7 @@ const main = () => {
     [0, 1],
     [0, 2],
   ]);
-  const food = new Food([25, 25]);
+  const food = new Food([0, 15]);
   const game = new Game(snake, food);
   const presenter = new Presenter($grid, game);
   const controller = new Controller(presenter, game);
@@ -32,7 +32,3 @@ const main = () => {
     controller.runGame();
   }, 200);
 };
-
-// window.onload = main;
-
-// const snake = [[0,0],[0,1],[0,2]]
