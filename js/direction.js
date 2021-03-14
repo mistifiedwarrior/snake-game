@@ -9,30 +9,21 @@ class Direction {
   }
 
   getDelta() {
-    if (this.direction === RIGHT) {
-      return [0, 1];
-    }
-    if (this.direction === LEFT) {
-      return [0, -1];
-    }
-    if (this.direction === UP) {
-      return [-1, 0];
-    }
-    if (this.direction === DOWN) {
-      return [1, 0];
-    }
+    const delta = {
+      [RIGHT]: [0, 1],
+      [LEFT]: [0, -1],
+      [UP]: [-1, 0],
+      [DOWN]: [1, 0],
+    };
+    return delta[this.direction];
   }
   setDirection(dir) {
-    if (this.direction == RIGHT && dir != LEFT) {
-      this.direction = dir;
-    }
-    if (this.direction == UP && dir != DOWN) {
-      this.direction = dir;
-    }
-    if (this.direction == DOWN && dir != UP) {
-      this.direction = dir;
-    }
-    if (this.direction == LEFT && dir != RIGHT) {
+    if (
+      (this.direction == RIGHT && dir != LEFT) ||
+      (this.direction == UP && dir != DOWN) ||
+      (this.direction == DOWN && dir != UP) ||
+      (this.direction == LEFT && dir != RIGHT)
+    ) {
       this.direction = dir;
     }
   }
