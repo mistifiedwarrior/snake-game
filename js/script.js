@@ -10,20 +10,15 @@ const attachEventListener = (controller) => {
   addButtonListener(controller, '#down', DOWN);
   addButtonListener(controller, '#left', LEFT);
   addButtonListener(controller, '#right', RIGHT);
-
+  const directions = {
+    ArrowUp: () => controller.changeDirection(UP),
+    ArrowDown: () => controller.changeDirection(DOWN),
+    ArrowLeft: () => controller.changeDirection(LEFT),
+    ArrowRight: () => controller.changeDirection(RIGHT),
+  };
   document.body.onkeydown = function (e) {
-    if (e.key === 'ArrowUp') {
-      controller.changeDirection(UP);
-    }
-    if (e.key === 'ArrowDown') {
-      controller.changeDirection(DOWN);
-    }
-    if (e.key === 'ArrowLeft') {
-      controller.changeDirection(LEFT);
-    }
-    if (e.key === 'ArrowRight') {
-      controller.changeDirection(RIGHT);
-    }
+    const key = e.key;
+    if (Object.keys(directions).includes(key)) directions[key]();
   };
 };
 
