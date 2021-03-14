@@ -1,4 +1,16 @@
+const addButtonListener = function (controller, id, direction) {
+  const $button = getElement(id);
+  $button.addEventListener('click', (e) => {
+    controller.changeDirection(direction);
+  });
+};
+
 const attachEventListener = (controller) => {
+  addButtonListener(controller, '#up', UP);
+  addButtonListener(controller, '#down', DOWN);
+  addButtonListener(controller, '#left', LEFT);
+  addButtonListener(controller, '#right', RIGHT);
+
   document.body.onkeydown = function (e) {
     if (e.key === 'ArrowUp') {
       controller.changeDirection(UP);

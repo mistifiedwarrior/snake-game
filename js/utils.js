@@ -1,5 +1,5 @@
-const NUM_OF_ROWS = 60;
-const NUM_OF_COLS = 80;
+const NUM_OF_ROWS = 50;
+const NUM_OF_COLS = 50;
 
 const getElement = (selector) => document.querySelector(selector);
 

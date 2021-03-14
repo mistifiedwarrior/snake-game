@@ -4,7 +4,7 @@ body {
 
 #grid {
   border: 5px solid black;
-  width: 800px;
+  width: 400px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
@@ -13,7 +13,7 @@ body {
 .cell {
   width: 8px;
   height: 8px;
-  border: 1px solid #eee;
+  /* border: 1px solid #eee; */
 }
 
 .snake {
@@ -30,10 +30,10 @@ body {
 }
 #end {
   position: absolute;
-  top: 20vh;
-  left: 30vw;
-  width: 40vw;
-  height: 40vh;
+  top: 25vh;
+  left: 40vw;
+  width: 20vw;
+  height: 20vh;
   background-color: #ccc;
   transition: all 0.4s;
   text-align: center;
@@ -41,4 +41,16 @@ body {
 }
 .hidden {
   display: none;
+}
+.button-container {
+  margin-top: 32px;
+}
+.button-container > div {
+  display: flex;
+  justify-content: center;
+}
+button {
+  height: 40px;
+  width: 40px;
+  padding: 8px;
 }
